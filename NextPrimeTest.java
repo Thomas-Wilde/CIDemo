@@ -61,8 +61,25 @@ public class NextPrimeTest {
   // --------------------------------------------------------------- //
   @Test
   public void testNextPrime() {
-    System.out.print("testing nextPrime() ... ");
-    assertEquals("this will fail", false, true);
-    // ToDo: implement this test function to check `nextPrime`
+    System.out.print("testing nextPrime(number) ... ");
+    // 2, 3, 5, 7, 11, 13, 17, 19,
+    // nextPrime(-1) -> 2
+    // nextPrime(0) -> 2
+    // nextPrime(2) -> 2
+    // nextPrime(3) -> 3
+    // nextPrime(4) -> 5
+    // nextPrime(5) -> 5
+    // nextPrime(257) -> 257
+    // nextPrime(258) -> 263
+    // nextPrime(259) -> 263
+    // nextPrime(260) -> 263
+    assertEquals("-1 -> 2", 2, NextPrime.nextPrime(-1));
+    assertEquals("0 -> 2", 2, NextPrime.nextPrime(0));
+    assertEquals("2 -> 2", 2, NextPrime.nextPrime(2));
+    assertEquals("3 -> 3", 3, NextPrime.nextPrime(3));
+    assertEquals("4 -> 5", 5, NextPrime.nextPrime(4));
+    assertEquals("5 -> 5", 5, NextPrime.nextPrime(5));
+    assertEquals("257 -> 257", 257, NextPrime.nextPrime(257));
+    assertEquals("258 -> 263", 263, NextPrime.nextPrime(263));
   }
 }

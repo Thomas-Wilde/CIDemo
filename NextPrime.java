@@ -37,9 +37,11 @@ public class NextPrime {
    * the number itself, if it is prime.
    */
   public static int nextPrime(int number) {
-    // ToDo: implement the unit test first
-    // ToDo: add code to get the next prime number
-    return 0;
+    if (isPrime(number))
+      return number;
+    while (!isPrime(number))
+      ++number;
+    return number;
   }
 
   // --------------------------------------------------------------- //
